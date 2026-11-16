@@ -7,10 +7,7 @@ if (!isset($_SESSION["start_time"])) {
     exit();
 }
 
-$start_time = $_SESSION["start_time"];
-$end_time = time();
-
-$duration = $end_time - $start_time;
+$duration = time() - $_SESSION["start_time"];
 
 $minutes = floor($duration / 60);
 $seconds = $duration % 60;
@@ -23,19 +20,26 @@ session_destroy();
 <html>
 <head>
     <title>Logout Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="container">
     <h1>Thank You!</h1>
     <p>You have successfully logged out.</p>
 
-    <p>
-        Duration of Usage:
+    <p>Duration of Usage:</p>
+
+    <p class="duration">
         <?php
-        echo $minutes . " minutes and "
-             . $seconds . " seconds";
+        echo "$minutes minutes and $seconds seconds";
         ?>
     </p>
+
+    <a href="index.html">
+        <button type="button">Back to Login</button>
+    </a>
+</div>
 
 </body>
 </html>
