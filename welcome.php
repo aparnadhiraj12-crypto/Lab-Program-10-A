@@ -3,7 +3,7 @@
 session_start();
 date_default_timezone_set("Asia/Kolkata");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = trim($_POST["username"] ?? "");
 
     if ($name === "") {
@@ -28,10 +28,10 @@ $name = htmlspecialchars(
 
 $start = date("h:i:s A", $_SESSION["start_time"]);
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Welcome Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -43,6 +43,7 @@ $start = date("h:i:s A", $_SESSION["start_time"]);
 
 <div class="container">
     <h1>Hello, <?php echo $name; ?>!</h1>
+
     <p>You have successfully logged in.</p>
 
     <form action="logout.php" method="POST">
@@ -52,3 +53,4 @@ $start = date("h:i:s A", $_SESSION["start_time"]);
 
 </body>
 </html>
+
