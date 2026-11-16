@@ -28,7 +28,7 @@ session_destroy();
     <h1>Thank You!</h1>
     <p>You have successfully logged out.</p>
 
-    <p>Duration of Usage:</p>
+    <h3>Duration of Usage</h3>
 
     <p class="duration">
         <?php
@@ -36,8 +36,8 @@ session_destroy();
         ?>
     </p>
 
-    <a href="index.html">
-        <button type="button">Back to Login</button>
+    <a href="index.html" class="btn">
+        Back to Login
     </a>
 </div>
 

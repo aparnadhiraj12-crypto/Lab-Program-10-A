@@ -20,7 +20,12 @@ if (!isset($_SESSION["username"])) {
     exit();
 }
 
-$name = htmlspecialchars($_SESSION["username"]);
+$name = htmlspecialchars(
+    $_SESSION["username"],
+    ENT_QUOTES,
+    "UTF-8"
+);
+
 $start = date("h:i:s A", $_SESSION["start_time"]);
 ?>
 
@@ -40,7 +45,7 @@ $start = date("h:i:s A", $_SESSION["start_time"]);
     <h1>Hello, <?php echo $name; ?>!</h1>
     <p>You have successfully logged in.</p>
 
-    <form action="logout.php" method="post">
+    <form action="logout.php" method="POST">
         <button type="submit">Logout</button>
     </form>
 </div>

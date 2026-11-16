@@ -18,13 +18,13 @@ body {
     background: white;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    text-align: center;
     width: 380px;
     max-width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #333;
     margin-bottom: 20px;
 }
@@ -32,35 +32,37 @@ h1, h2 {
 p {
     color: #555;
     margin-bottom: 20px;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-input[type="text"] {
+input {
     width: 100%;
     padding: 12px;
-    margin: 15px 0;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
 }
 
-button {
+button, .btn {
+    display: inline-block;
     background: #667eea;
     color: white;
-    border: none;
     padding: 12px 30px;
+    border: none;
     border-radius: 8px;
-    cursor: pointer;
     font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-button:hover {
+button:hover, .btn:hover {
     background: #4c5fd5;
 }
 
 .start-time {
     position: absolute;
     top: 20px;
-    right: 25px;
+    right: 20px;
     background: white;
     padding: 12px 20px;
     border-radius: 8px;
@@ -68,6 +70,7 @@ button:hover {
 }
 
 .duration {
-    font-weight: bold;
     color: #667eea;
+    font-size: 20px;
+    font-weight: bold;
 }
