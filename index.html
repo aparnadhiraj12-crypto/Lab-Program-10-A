@@ -3,15 +3,21 @@
 <html>
 <head>
     <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Enter Your Name</h2>
+
+<div class="container">
+    <h2>Welcome!</h2>
+    <p>Please enter your name to continue</p>
 
     <form action="welcome.php" method="post">
-        Name:
-        <input type="text" name="username" required>
-        <br><br>
-        <input type="submit" value="Login">
+        <input type="text" name="username"
+               placeholder="Enter your name" required>
+
+        <button type="submit">Login</button>
     </form>
+</div>
+
 </body>
 </html>
