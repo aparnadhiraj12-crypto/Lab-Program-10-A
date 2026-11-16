@@ -21,26 +21,29 @@ if (!isset($_SESSION["username"])) {
 }
 
 $name = htmlspecialchars($_SESSION["username"]);
-$start_time = date("h:i:s A", $_SESSION["start_time"]);
+$start = date("h:i:s A", $_SESSION["start_time"]);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Welcome Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div style="text-align:right;">
-        Start Time: <?php echo $start_time; ?>
-    </div>
+<div class="start-time">
+    Start Time: <?php echo $start; ?>
+</div>
 
+<div class="container">
     <h1>Hello, <?php echo $name; ?>!</h1>
-    <p>Welcome to the website.</p>
+    <p>You have successfully logged in.</p>
 
     <form action="logout.php" method="post">
-        <input type="submit" value="Logout">
+        <button type="submit">Logout</button>
     </form>
+</div>
 
 </body>
 </html>
